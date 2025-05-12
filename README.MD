@@ -30,8 +30,6 @@ research_templates/
 │
 ├── 0_media/           # Images and media for documentation
 │
-├── SMU_Letterhead_Template.docx # Example letterhead
-│
 └── README.MD          # This file
 ```
 
