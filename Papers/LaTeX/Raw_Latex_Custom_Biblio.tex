@@ -1,0 +1,151 @@
+%Preamble
+\documentclass[12pt]{article}
+\parindent 1cm %Es el identation al principio de la primera linea de un parrafo (sangria)
+\parskip 0.2cm %Distancia entre parrafos
+%\topmargin 0.2cm %Margen arriba
+%\oddsidemargin 1cm %Margen a la izquierda
+%\evensidemargin 0.5cm %Margen a la derecha
+%\textwidth 15cm %Ancho del texto principal
+%\textheight 21cm %Alto del texto principal
+\usepackage[bottom]{footmisc}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{MnSymbol}
+%\usepackage{anysize} %A package for changing margins
+%\usepackage[toc,page]{appendix}
+\usepackage{appendix}
+\usepackage{amsthm}
+%\usepackage{sgame}%For game theory tables
+\usepackage{geometry}
+\usepackage[latin1]{inputenc}% or whatever
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{anysize}
+\usepackage{placeins}
+%\usepackage[bottom]{footmisc}
+\usepackage{setspace}
+\usepackage{hyperref}
+%\newenvironment{proof}{\noindent {\bf Proof:}}{$\square$}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{condition}{Condition}
+\newenvironment{proof:}{\paragraph{}}{\hfill$\square$}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{dirtytalk}
+\usepackage{newpxtext} % use the palatino font
+
+\hypersetup{
+ linkcolor=blue, 
+filecolor=blue, 
+urlcolor=blue, 
+citecolor=black}
+\newtheorem{remark}{Remark}
+
+% Code for indented bilbiography
+\makeatletter
+\renewcommand\@biblabel[1]{} % No brackets for the references
+\renewenvironment{thebibliography}[1]
+      {\section*{\refname}%
+       \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+       \list{\@biblabel{\@arabic\c@enumiv}}%
+            {\settowidth\labelwidth{\@biblabel{#1}}%
+             \leftmargin\labelwidth
+             \advance\leftmargin20pt% change 20 pt according to your needs
+             \advance\leftmargin\labelsep
+             \setlength\itemindent{-20pt}% change using the inverse of the length used before
+             \@openbib@code
+             \usecounter{enumiv}%
+             \let\p@enumiv\@empty
+             \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+       \sloppy
+       \clubpenalty4000
+       \@clubpenalty \clubpenalty
+       \widowpenalty4000%
+       \sfcode`\.\@m}
+      {\def\@noitemerr
+        {\@latex@warning{Empty `thebibliography' environment}}%
+       \endlist}
+\renewcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+
+%\usepackage{kpfonts}
+%\usepackage[letterpaper]{geometry}
+%\usepackage{tikz}
+
+\marginsize{2cm}{2cm}{1.8cm}{1.8cm} %the order is the following: left right top bottom
+
+\linespread{1.5}
+\doublespacing
+
+\begin{document}
+\title{Aggregate Costs of  Gender Discrimination in the Labor Market}
+\author{Javier Gonzalez\thanks{} \and Francisco Parro\thanks{}}
+\date{August, 2020}
+\maketitle
+\begin{abstract}
+\begin{singlespace}
+We...
+\end{singlespace}
+\end{abstract}
+
+\begin{spacing}{0}
+
+\end{spacing}
+\begin{spacing}{0}
+\noindent \begin{flushleft}
+\newpage{} 
+\par\end{flushleft}
+\end{spacing}
+
+\section{Introduction}
+
+In modern economies, women face several occupational choices, which involve both market and non-market sectors. For instance, women must
+decide whether to produce goods and services at the marketplace or at home; they must decide whether to work in someone else's company or to start their own business; women must also choose the industry where they will develop their careers; and so on. In a frictionless economy, women would self-select into market and non-market activities based on their skills, just like men do. However, gender discrimination in the labor market 
+ distort women's occupational choices and, thus, the allocation of female talent in the labor market. The latter impacts the possibilities of production of the economy and, thus, triggers aggregate consequences.\footnote{Hsieh et al. (2019) emphasize that an efficient distribution of talent within industries is important for aggregate productivity and market output. Barsh and Yee (2012) claim that the employment of women on an equal basis would allow companies to make a better use of talent.} This paper quantifies the aggregate costs of  the latter misallocation of female talent.
+
+
+\begin{thebibliography}{9}
+\bibitem{} Agier, I. and A. Szafarz (2013). ``Microfinance and Gender: Is There a Glass Ceiling on Loan Size?" {\it World Development} 42, 165--181.
+\bibitem{} Aigner, D. and G. Cain (1977). ``Statistical Theories of Discrimination in Labor Markets." {\it Ind. Labor Relations Rev.} 30, 175. 
+\bibitem{} Alesina, A., Lotti, F., and  P. Mistrulli (2013).``Do women pay more for credit? Evidence from Italy", {\it Journal of the European Economic Association} 11(1), 45--66.
+\end{thebibliography} 
+
+
+
+\setcounter{lemma}{0}
+\setcounter{proposition}{0}
+\setcounter{theorem}{0}
+\setcounter{corollary}{0}
+\section*{ Appendix A:  Inputs Demands}
+In this appendix, we use equations (\ref{e2}) through (\ref{e10}) to derive the demand level for each of the inputs of the production technology of our model economy. We use first equations (\ref{e4}),  (\ref{e5}), and (\ref{e7}) to get:
+\begin{equation}\tag{A1}
+k(z)=\left(\frac{\zeta\alpha}{R}\right)^{\frac{1}{1-\zeta \alpha}}A^{\frac{1}{1-\zeta\alpha}}z^{\frac{1-\zeta}{1-\zeta\alpha}}n(z)^{\frac{\zeta(1-\alpha)}{1-\zeta\alpha}}.
+\end{equation}
+
+Then, we plug (A1) in (\ref{e4}) and use (\ref{e5}) to get:
+\begin{equation}\tag{A2}
+\frac{y(z)}{n(z)}=\left(\frac{\zeta\alpha}{R}\right)^{\frac{\zeta\alpha}{1-\zeta \alpha}}A^{\frac{1}{1-\zeta\alpha}}\left(\frac{z}{n(z)}\right)^\frac{1-\zeta}{1-\zeta\alpha}.
+\end{equation}
+
+\newpage
+{\normalsize \setcounter{secnumdepth}{0}}
+\end{document}
+
+
+
+

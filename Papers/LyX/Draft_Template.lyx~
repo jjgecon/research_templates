@@ -1,0 +1,325 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\parindent 1cm %Es el identation al principio de la primera linea de un parrafo (sangria)
+\parskip 0.2cm %Distancia entre parrafos
+\usepackage[bottom]{footmisc}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{MnSymbol}
+\usepackage{appendix}
+\usepackage{amsthm}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{anysize}
+\usepackage{placeins}
+\usepackage{setspace}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}{Proposition}\newtheorem{definition}{Definition}\newtheorem{corollary}{Corollary}\newtheorem{lemma}{Lemma}\newtheorem{assumption}{Assumption}\newtheorem{condition}{Condition}\newenvironment{proof:}{\paragraph{}}{\hfill$\square$}
+\usepackage{ragged2e}
+\usepackage{booktabs}
+
+% Define the colors to be used
+\definecolor{blue}{RGB}{15,82,186}
+\definecolor{red}{RGB}{172, 68, 37}
+\definecolor{yellow}{RGB}{186,137,104}
+\definecolor{green}{RGB}{79, 121, 66}
+
+% expand the margins% Geometry margins
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+
+\linespread{2.5}
+\usepackage{setspace}
+
+% add line numbering
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package none
+\inputencoding iso8859-1
+\fontencoding default
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 12
+\spacing double
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=blue, filecolor=blue, urlcolor=blue, citecolor=black"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Title 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+large Subtitle} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Javier Gonzalez
+\backslash
+thanks{I am no longer a member of this department} 
+\backslash
+,
+ and Co-Author
+\backslash
+thanks{I am no longer a member of this department}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{May,
+ 2020 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{https://jjgecon.github.io/}{Latest Available Version}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\paragraph_spacing onehalf
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{singlespace}
+\end_layout
+
+\end_inset
+
+Several gender gaps have shrunk over past decades in developed countries.
+ However,
+ a gender gap in entrepreneurship sill persists.
+ In fact,
+ the difference between men and female entrepreneurs have risen in recent decades.
+ Fewer female entrepreneurs,
+ in quantity and quality,
+ can decrease aggregate output and productivity.
+ The entrepreneurial gap can be caused by four labor market distortions:
+ (i) a gender profit gap,
+ (ii) the presence of household production,
+ (iii) a capital restriction for female entrepreneurs and a (iv) wage gap.
+ Using a span-and-control model,
+ this thesis measures the macroeconomic effects of each distortion and identifies which ones have negative effects.
+ A 20% household productivity increase leads to a 6.3% reduction of GDP,
+ while a profit gap of 20% can decrease GDP in 3%.
+ In contrast,
+ the capital and wage gaps have little and no impact on macroeconomic variables in the general equilibrium.
+ Overall,
+ these findings suggest that childcare policies and reducing a gender profit gap can increase aggregate output and productivity.
+\end_layout
+
+\begin_layout Abstract
+\paragraph_spacing onehalf
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{singlespace}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\paragraph_spacing onehalf
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\paragraph_spacing onehalf
+
+\series bold
+JEL Classification:
+\end_layout
+
+\begin_layout Abstract
+\paragraph_spacing onehalf
+
+\series bold
+Keywords:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Several gender gaps have shrunk in the last decades.
+ In the United States,
+ the difference between female and male labor force participation rates has decreased from 52% in 1950 to 14% in 2005.
+ For OECD countries,
+ International Labor Organization (ILO) data show that this difference has changed from 25.8% in 1990 to 17.3% in 2018.
+ The gender wage gap followed a similar trend.
+ According to the OECD,
+ the difference between the median earnings of men and women relative to median earnings of men has decreased from 19.6% in 1995 to 13.4% in 2017.
+ In terms of education,
+ the differences between secondary and tertiary education attainment between male and females has significantly reduced.
+ The gender gap in tertiary education enrollment flipped from 2.9% in 1990 to -2.2% in 2000 for the United States (Parro,
+ 2020) and flipped from 0.7% in 2000 to -6.5% in 2018 for OECD.
+ In addition,
+ women have increased their political participation.
+ In the European Union,
+ women represented 20.5% of the parliament seats in 2002 and this increased to 31.7% in 2019.
+ 
+\end_layout
+
+\begin_layout Standard
+nal Labor Organization (ILO) data show that this difference has changed from 25.8% in 1990 to 17.3% in 2018.
+ The gender wage gap followed a similar trend.
+ According to the OECD,
+ the difference between the median earnings of men and women relative to median earnings of men has decreased from 19.6% in 1995 to 13.4% in 2017.
+ In terms of education,
+ the differences between secondary and tertiary education attainment between male and females has significantly reduced.
+ The gender gap in tertiary education enrollment flipped from 2.9% in 1990 to -2.2% in 2000 for the United States (Parro,
+ 2020) and flipped from 0.7% in 2000 to -6.5% in 2018 for OECD.
+ In addition,
+ women have increased their political participation.
+ In the European Union,
+ women represented 20.5% of the parliament seats in 2002 and this increased to 31.7% in 2019.
+ 
+\end_layout
+
+\end_body
+\end_document

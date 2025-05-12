@@ -1,0 +1,15 @@
+#table(
+  columns: (auto, auto, auto, auto),
+  rows: (1.15cm, auto, auto, auto),
+  align: (left + horizon, center + horizon, center + horizon, center + horizon),
+  stroke: none, column-gutter: 0.5cm, row-gutter: 0.2cm,
+ table.hline(stroke: 2pt, position: top),
+ table.header([Year], [Same birth state], [Same muni. (t-5)], [Mexican Sample]),
+ table.hline(),
+  [1990], [0.83], [--], [8.1m],
+  [2000], [0.81], [0.82], [10.0m],
+  [2010], [0.82], [0.83], [11.8m],
+  [2015], [0.83], [0.85], [22.4m],
+  [2020], [0.83], [0.86], [14.9m],
+ table.hline(stroke: 2pt),
+)
