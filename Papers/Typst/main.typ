@@ -1,12 +1,26 @@
 
+#import "@preview/showybox:2.0.4": showybox
 #import "conf.typ": conf
+
+#let p_red =  rgb(172, 68, 37)
+#let p_blue = rgb(15,82,186)
+#let p_green = rgb(79, 121, 66)
+#let p_yellow = rgb(186,137,104)
+
+// Create figure notes
+#let fig_notes(body_of_text) = {
+  align(left)[
+  #set par(justify: true)
+  #text(8pt)[Notes: #body_of_text]
+  ]
+}
 
 #show: conf.with(
   title: [
     The Disney Princess Effect:
   ],
   subtitle: [
-    Female Labor Decisions and Gender Stereotypes
+    Female Labor Decisions and Gender Stereotypes\*   // Try to always add \* to the end
   ],
   authors: (
     (
@@ -16,11 +30,12 @@
     ),
     
   ),
+  paper_link: "https://jjgecon.github.io/",
   abstract: [
     #lorem(120)
     ],
   thanks: [
-    Thanks to Omer Ozak, Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi XXX for their feedback and support.. Thanks to Leonardo Sepulveda for invaluable research assitance and support. Special thanks to the SMU Economics Department Ph.D. students  
+    Thanks to Omer Ozak (CHANGE THIS to the correct spelling), Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi Liang, and Lucas Garcia dos Santos for their feedback and support. Thanks to Leonardo Sepulveda for invaluable research assitance and support. Special thanks to the SMU Economics Department Ph.D. students  
     ],
 )
 
@@ -31,7 +46,7 @@ Disney’s latest princess tales present protagonists who drive their own storie
 
 This narrative evolution also mirrors broader conversations about gender equity and inclusion, allowing Disney to engage a more diverse global audience, unlock new merchandising and social media opportunities, and bolster its reputation as an innovative storyteller. In our analysis, exposure to these empowered figures corresponds with a 12% increase in women’s labor force participation and a notable shift in young viewers’ professional goals.#footnote[#lorem(20)]
 
-What if I cite @domenech-arumi_neighborhoods_2023
+What if I cite @domenech-arumi_neighborhoods_2023 #cite(<singh_novel_2022>, form: "prose")
 
 = Data
 
@@ -50,4 +65,103 @@ Therefore, what I do is to assume that station characteristics change little ove
 
 Localidad data comes from the National Institute of Statistics and Geography (INEGI) Geo (INEGI) and Labor Market data comes from mexico's Central Bank EconLab's Local Labor Markets micro data available in #link("https://www.banxico.org.mx/DataSetsWeb/dataset?ruta=LLM&idioma=en")[here] which combines both the National Survey of Occupation and Employment (ENOE) and the Census surveys in 1990, 2000, 2010, 2015, 2020.
 
+= Empirical Strategy
+
+Some math here just to check how does it look
+
+
+$ y_(o w l c) = alpha*X^(prime)_(o w) + delta_(o w) + epsilon_(o w l c) $
+
+Even you can do colors in math!
+
+$ x = #text(fill: p_red)[$a + b + 10$] $
+
+#lorem(200)
+
+#figure(
+  image("test_img.jpeg", width: 30%),
+  caption: [A curious figure.],
+) <ai_figure>
+
+As you can see in @ai_figure a representation of the main idea and in @internal_migration a table showing that internal migration is not a problem in mexico.
+
+#figure(caption: [A curious table.])[
+  #include("internal_migration.typ")
+  
+  #fig_notes(lorem(50))
+
+] <internal_migration>
+
+Now  we can also add a simple box with @m_prompt
+
+#figure(caption: [asdasd], supplement: [Block], kind: "block")[
+  #showybox(
+    frame: (
+      border-color: black,
+      title-color: p_red.lighten(60%),
+      border-width: 1pt,
+    ),
+    title-style: (
+      color: black,
+      weight: "regular",
+      align: center
+    ),
+    title: [_Female Strong Woman_ prompt])[
+    #set text(font: "Courier New", size: 10pt)
+    #lorem(50) 
+    ] 
+] <m_prompt>
+
+#figure(
+  caption: [Overall figure caption]
+)[ 
+  #counter(figure.where(kind: "panel")).update(0)
+  #set figure.caption(position: bottom)
+  #v(0.2cm)
+  #grid(
+  columns: 2,
+  gutter: 20pt,
+  figure(caption: [a curious figure.], supplement: [Panel], kind: "panel", numbering: "A")[
+    #image("test_img.jpeg", width: 100%)
+  ],
+  figure(caption: [another curious figure.], supplement: [Panel], kind: "panel", numbering: "A")[
+    #image("test_img.jpeg", width: 100%)
+  ],
+)
+ ]
+
+#figure(
+  caption: [Overall figure caption]
+)[ 
+  #counter(figure.where(kind: "panel")).update(0) // super important to reset the counter within each figure
+  #set figure.caption(position: bottom)
+  #v(0.2cm)
+  #grid(
+  columns: 3,
+  gutter: 20pt,
+  figure(caption: [a curious figure.], supplement: [Panel], kind: "panel", numbering: "A")[
+    #image("test_img.jpeg", width: 100%)
+  ],
+  figure(caption: [another curious figure.], supplement: [Panel], kind: "panel", numbering: "A")[
+    #image("test_img.jpeg", width: 100%)
+  ],
+  figure(caption: [yet another curious figure.], supplement: [Panel], kind: "panel", numbering: "A")[
+    #image("test_img.jpeg", width: 100%)
+  ])
+  #fig_notes(lorem(50))
+ ]
+
 #bibliography("My Library.bib", style: "harvard-cite-them-right")
+
+// Appendix Begins here
+#counter(heading).update(0)
+#set heading(numbering: "A.1")
+
+= Appendix
+
+== Popular Telenovelas
+
+== Second part of the appendix
+
+== Some other apendix
+

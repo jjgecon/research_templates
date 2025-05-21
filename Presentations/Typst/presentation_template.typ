@@ -22,7 +22,8 @@
 
 // Title slide with Emoji summary
 // for a emoji list you can look here https://typst.app/docs/reference/symbols/emoji/
-#title-slide(authors: ([Javier Gonzalez]), emoji_summary: [#emoji.woman.crown #emoji.fairy #text(size:24pt)[vs.] #emoji.woman.crown #emoji.fist.front])
+#title-slide(authors: ([Javier Gonzalez]), 
+             emoji_summary: [#emoji.woman.crown #emoji.fairy #text(size:24pt)[vs.] #emoji.woman.crown #emoji.fist.front])
 
 // Title slide without emoji summary, you can customize this if you want
 #title-slide(authors: ([Javier Gonzalez]), emoji_summary: none)
