@@ -289,7 +289,9 @@
     config-methods(
       init: (self: none, body) => {
         // default font size and font
-        set text(font: "Lato", size: 20pt)
+        set text(font: "Nebula Sans", size: 20pt)
+        // math font
+        show math.equation: set text(font: "Noto Sans Math", size: 20pt)
 
         // set default math font
         // show math.equation: set text(font: "Garamond-Math")

@@ -1,8 +1,8 @@
 #table(
   columns: (auto, auto, auto, auto),
-  rows: (1.15cm, auto, auto, auto),
+  rows: (auto, auto, auto, auto),
   align: (left + horizon, center + horizon, center + horizon, center + horizon),
-  stroke: none, column-gutter: 0.5cm, row-gutter: 0.2cm,
+  stroke: none,
  table.hline(stroke: 2pt, position: top),
  table.header([Year], [Same birth state], [Same muni. (t-5)], [Mexican Sample]),
  table.hline(),
