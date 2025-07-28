@@ -1,8 +1,38 @@
 
-// Configuration Settings by Javier Gonzalez
-// For an updates version please see https://github.com/jjgecon/research_templates
 
+#let p_red =  rgb(172, 68, 37)
+#let p_blue = rgb(15,82,186)
+#let p_green = rgb(79, 121, 66)
+#let p_yellow = rgb(186,137,104)
 
+//  add a similar to the LaTeX paragraph
+#let sentence_start(body_of_text) = {
+  text[*#body_of_text* #h(.2cm)] 
+}
+
+// Create figure notes
+#let fig_notes(body_of_text) = {
+  align(left)[
+  #set par(justify: true)
+  #text(0.7em)[Notes: #body_of_text]
+  ]
+}
+
+// Editing notes
+// Would have been better to do with the other package but it did not work
+#let editing_notes(body_of_text) = {
+  set text(font: "Galvji", size: 1.2em)
+  box(inset: 1pt, fill: p_red.lighten(60%))[
+  #upper(body_of_text)
+  ]
+}
+
+#let backmatter(content) = {
+	set heading(numbering: "A.1")
+	counter(heading).update(0)
+	state("backmatter").update(true)
+	content
+  }
 
 #let conf(
   title: none,
@@ -11,19 +41,16 @@
   paper_link: none,
   abstract: none,
   thanks: none,
+  JEL_codes: none,
+  keywords: none,
   doc,
 ) = {
   // Global settings
-  let p_red =  rgb(172, 68, 37)
-  let p_blue = rgb(15,82,186)
-  let p_green = rgb(79, 121, 66)
-  let p_yellow = rgb(186,137,104)
-
   set page(margin: 2cm, 
            columns: 1)
 
-  set text(font: "Palatino Linotype",
-           size: 12pt)
+  set text(font: "Palatino",
+           size: 11pt)
 
   set align(center)
   par(text(20pt, title ))
@@ -39,16 +66,20 @@
     row-gutter: 24pt,
     ..authors.map(author => [
       #text(size: 14pt)[#smallcaps(author.name)] \
+
       #set text(size:10pt, fill: luma(23.14%))
       #author.affiliation \
       #link("mailto:" + author.email)
     ]),
   )
   
-   
-  link(paper_link)[
-    #text(fill: p_blue)[Latest Available Version]]
-
+  block()[
+    #datetime.today().display("[month repr:long] [year]")
+    
+    #link(paper_link)[
+    #text(fill: p_blue)[Latest Available Version]] 
+    ]
+    
   v(1cm)
   block(
     width: 85%,
@@ -63,14 +94,12 @@
   v(1fr)
   par(justify: true)[
     #set text(size: 10pt)
-      *JEL Clasification:* J20, C10, P20\
-      *Keywords:*
+      *JEL Clasification:* #JEL_codes\
+      *Keywords:* #keywords
     ]
   line(length: 95%, stroke: 0.5pt)
-  
   par(first-line-indent: 1em, justify: true)[#text(size: 8pt)[\*#thanks]]
-  
-  
+
   pagebreak()
   
   // Main configs after the title page
@@ -95,8 +124,15 @@
   // Set figure settings
   set figure.caption(position: top)
 
+  // Table settings?
+  set table(stroke:none)
+
+  // Paragraph settings
+  set par(justify: false, first-line-indent:2em)
+
+  // reset the page format to skip the number
+  set page(margin: 2cm, columns: 1, numbering: "1")
+
   // whole doc bellow
   doc
 }
-
-

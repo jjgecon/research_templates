@@ -1,0 +1,8 @@
+ipython
+ipyparallel
+jupyter
+matplotlib
+numpy
+pandas 
+tqdm
+pip

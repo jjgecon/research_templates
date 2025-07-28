@@ -4,6 +4,7 @@
 
 #let conf(
   uni_logo: none,
+  university: none,
   college: none,
   department: none, 
   recepient: none,
@@ -12,7 +13,7 @@
 ) = {
   // Global settings
   // colors
-  let smu_red =  rgb(170, 18, 49) // change these to match yout university colors
+  let smu_red =  rgb(170, 18, 49)
   let smu_blue = rgb(52,67,148)
 
   // Header
@@ -41,7 +42,7 @@
   set table(stroke:none)
   
   // reset the page format to skip the number
-  set page(margin: (top: 5cm, bottom: 3cm, rest: 2cm), columns: 1, numbering: "1",
+  set page(margin: (top: 5cm, bottom: 3.5cm, rest: 2cm), columns: 1, numbering: "1",
            header: [
             #grid(columns: (1fr, 2fr), align: (left, horizon + right), 
             [#image(uni_logo, width: 60%)],
@@ -70,7 +71,7 @@
     }
   ]
 
-  v(1cm)
+  v(0.6cm)
 
   par()[Dear #recepient:]
 
@@ -80,11 +81,15 @@
   doc
 
   // signature
-  par()[
+  v(.5cm)
+  [
     #set align(left)
-    Sincerely, \
-    #author.name 
+    Kind regards, \
+    #author.name \
+    #author.position \
+    #university \
+    #author.email \
   ]
+  v(2cm)
+  line(end:(50%,0%))
 }
-
-

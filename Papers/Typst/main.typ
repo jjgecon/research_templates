@@ -1,11 +1,6 @@
 
 #import "@preview/showybox:2.0.4": showybox
-#import "conf.typ": conf
-
-#let p_red =  rgb(172, 68, 37)
-#let p_blue = rgb(15,82,186)
-#let p_green = rgb(79, 121, 66)
-#let p_yellow = rgb(186,137,104)
+#import "conf.typ": *
 
 // Create figure notes
 #let fig_notes(body_of_text) = {
@@ -20,7 +15,7 @@
     The Disney Princess Effect:
   ],
   subtitle: [
-    Female Labor Decisions and Gender Stereotypes\*   // Try to always add \* to the end
+    Female Labor Decisions and Gender Stereotypes on TV\*   // Try to always add \* to the end
   ],
   authors: (
     (
@@ -35,8 +30,12 @@
     #lorem(120)
     ],
   thanks: [
-    Thanks to Omer Ozak (CHANGE THIS to the correct spelling), Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi Liang, and Lucas Garcia dos Santos for their feedback and support. Thanks to Leonardo Sepulveda for invaluable research assitance and support. Special thanks to the SMU Economics Department Ph.D. students  
+    Thanks to Omer Ozak, Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi Liang for their feedback and support. 
+    Thanks to Leonardo Sepulveda for invaluable research assistance and support. 
+    Special thanks to the SMU Economics Department Ph.D. students and staff.
     ],
+  JEL_codes: [H11, H23, N16, P16, L82],
+  keywords: [ Redistribution, Media, Latin America, Inequality, Perceptions, Telenovelas ],
 )
 
 #set par(justify: true)
@@ -153,15 +152,45 @@ Now  we can also add a simple box with @m_prompt
 
 #bibliography("My Library.bib", style: "harvard-cite-them-right")
 
-// Appendix Begins here
-#counter(heading).update(0)
-#set heading(numbering: "A.1")
+#show: backmatter
 
+// Appendix Begins here
 = Appendix
 
-== Popular Telenovelas
+// Some other conf for Appendix
+#set figure(numbering: it => {
+  //workaround...
+  let appx = state("backmatter", false).get()
+  let alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  let hdr = counter(heading).get().at(0)
+  if appx [#alph.at(hdr - 1).#it]
+  else [#hdr.#it]
+})
 
-== Second part of the appendix
+#show heading.where(level: 1): hdr => {
+  counter(figure.where(kind:image)).update(0)
+  counter(figure.where(kind:table)).update(0)
+  hdr
+}
 
-== Some other apendix
+#counter(heading).update(0)
+#show heading.where(level: 1): it => [
+  #set align(left)
+  #set text(20pt, weight: "bold")
+  #block(below: 1em)[#context {counter(heading).display(it.numbering + ".")} #h(0.5em)#smallcaps(it.body)]
+]
+
+#counter(figure.where(kind: image)).update(0)
+#counter(figure.where(kind: table)).update(0)
+
+= Popular Telenovelas
+
+#figure(
+  image("test_img.jpeg", width: 30%),
+  caption: [A curious figure.],
+) 
+
+= Second part of the appendix
+
+= Some other apendix
 
