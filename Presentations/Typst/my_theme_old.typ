@@ -8,19 +8,16 @@
 #let p_blue = rgb(15,82,186)
 #let p_green = rgb(79, 121, 66)
 #let p_yellow = rgb(186,137,104)
-#let p_purple = rgb(120, 81, 169)
-
-//
-#set page(numbering: none)
 
 // linkbox
-#let linkbox(link) = {
+#let linkbox(ref) = {
   set text(10pt, fill: white, weight: "bold")
-  box(fill: rgb("#919191"), inset: 5pt, radius: 5pt)[#link]
+  box(fill: rgb("#919191"), inset: 5pt, radius: 5pt)[#ref]
   }
 
 // TODO: Figure out how to do this better
 #let r_strong(content) = {text(fill: p_red, weight: "bold", content)}
+
 
 /// Default slide function for the presentation.
 ///
@@ -63,7 +60,6 @@
     v(.5em)
     deco-format(
       components.left-and-right(
-        // "gonzalez@smu.edu",
         utils.call-or-display(self, self.store.footer),
         utils.call-or-display(self, self.store.footer-right),
       ),
@@ -269,8 +265,7 @@
   aspect-ratio: "16-9",
   header: none,
   header-right: self => self.info.logo,
-  footer: "",
-  // footer: "Javier Gonzalez - SMU - gonzalezjj@smu.edu",
+  footer: none,
   footer-right: context utils.slide-counter.display() + " / " + utils.last-slide-number,
   // Define theme colors with defaults
   primary: black,  // Default is green
@@ -294,7 +289,9 @@
     config-methods(
       init: (self: none, body) => {
         // default font size and font
-        set text(font: "Lato", size: 20pt)
+        set text(font: "Nebula Sans", size: 20pt)
+        // math font
+        show math.equation: set text(font: "Noto Sans Math", size: 20pt)
 
         // set default math font
         // show math.equation: set text(font: "Garamond-Math")
@@ -322,6 +319,9 @@
             it
           }
         }
+
+        // Set the default color for links
+        show link: set text(fill: p_blue) 
 
         body
       },

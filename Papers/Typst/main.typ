@@ -152,10 +152,10 @@ Now  we can also add a simple box with @m_prompt
 
 #bibliography("My Library.bib", style: "harvard-cite-them-right")
 
-#show: backmatter
-
 // Appendix Begins here
 = Appendix
+
+#show: backmatter
 
 // Some other conf for Appendix
 #set figure(numbering: it => {
@@ -176,14 +176,14 @@ Now  we can also add a simple box with @m_prompt
 #counter(heading).update(0)
 #show heading.where(level: 1): it => [
   #set align(left)
-  #set text(20pt, weight: "bold")
-  #block(below: 1em)[#context {counter(heading).display(it.numbering + ".")} #h(0.5em)#smallcaps(it.body)]
+  #set text(weight: "bold")
+  #block(below: 1em)[#context {counter(heading).display(it.numbering + ".")}#h(0.5em)#smallcaps(it.body)]
 ]
+
+= Popular Telenovelas
 
 #counter(figure.where(kind: image)).update(0)
 #counter(figure.where(kind: table)).update(0)
-
-= Popular Telenovelas
 
 #figure(
   image("test_img.jpeg", width: 30%),
@@ -192,5 +192,10 @@ Now  we can also add a simple box with @m_prompt
 
 = Second part of the appendix
 
+#counter(figure.where(kind: image)).update(0)
+#counter(figure.where(kind: table)).update(0)
+
 = Some other apendix
 
+#counter(figure.where(kind: image)).update(0)
+#counter(figure.where(kind: table)).update(0)

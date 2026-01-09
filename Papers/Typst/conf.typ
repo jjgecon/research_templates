@@ -11,10 +11,12 @@
 }
 
 // Create figure notes
-#let fig_notes(body_of_text) = {
-  align(left)[
+#let fig_notes(body_of_text, width: 100%) = {
+  box(inset: 1pt, width: width)[
+  #align(left)[
   #set par(justify: true)
   #text(0.7em)[Notes: #body_of_text]
+  ]
   ]
 }
 
@@ -98,7 +100,7 @@
       *Keywords:* #keywords
     ]
   line(length: 95%, stroke: 0.5pt)
-  par(first-line-indent: 1em, justify: true)[#text(size: 8pt)[\*#thanks]]
+  par(first-line-indent: 1em, leading: 0.35em, justify: true)[#text(size: 8pt)[\*#thanks]]
 
   pagebreak()
   
@@ -108,15 +110,15 @@
   // Heading settings
   set heading(numbering: "1.1")
 
-  show heading.where(level: 1): it => [
-    #set align(center)
-    #set text(20pt, weight: "bold")
-    #block(below: 1em)[#smallcaps(it.body)]
-    ]
-  show heading.where(level: 2): it => [
-    #set text(16pt, weight: "bold")
-    #block[#it]
-    ]
+  // show heading.where(level: 1): it => [
+  //   #set align(center)
+  //   #set text(20pt, weight: "bold")
+  //   #block(below: 1em)[#smallcaps(it.body)]
+  //   ]
+  // show heading.where(level: 2): it => [
+  //   #set text(16pt, weight: "bold")
+  //   #block[#it]
+  //   ]
 
   // Link settings
   show link: set text(fill: p_blue)
@@ -129,6 +131,9 @@
 
   // Paragraph settings
   set par(justify: false, first-line-indent:2em)
+  
+  // Editing Mode: Uncomment the next line to see the text with bigger paragraph spacing
+  // set par(leading: 1.5em, spacing: 2em)
 
   // reset the page format to skip the number
   set page(margin: 2cm, columns: 1, numbering: "1")
@@ -136,3 +141,5 @@
   // whole doc bellow
   doc
 }
+
+
