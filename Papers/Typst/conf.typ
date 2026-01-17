@@ -1,4 +1,6 @@
-
+// Put here all the extra packages that you 
+#import "@preview/dashy-todo:0.1.3": todo
+#import "@preview/showybox:2.0.4": showybox
 
 #let p_red =  rgb(172, 68, 37)
 #let p_blue = rgb(15,82,186)
@@ -11,21 +13,12 @@
 }
 
 // Create figure notes
-#let fig_notes(body_of_text, width: 100%) = {
+#let fig_notes(body_of_text, width: 100%, spacing: 0.8em) = {
   box(inset: 1pt, width: width)[
   #align(left)[
-  #set par(justify: true)
+  #set par(justify: true, leading: spacing)
   #text(0.7em)[Notes: #body_of_text]
   ]
-  ]
-}
-
-// Editing notes
-// Would have been better to do with the other package but it did not work
-#let editing_notes(body_of_text) = {
-  set text(font: "Galvji", size: 1.2em)
-  box(inset: 1pt, fill: p_red.lighten(60%))[
-  #upper(body_of_text)
   ]
 }
 
