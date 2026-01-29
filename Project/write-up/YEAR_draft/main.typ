@@ -3,10 +3,10 @@
 
 #show: conf.with(
   title: [
-    The Disney Princess Effect:
+    Does Watching Women Work, Work?
   ],
   subtitle: [
-    Female Labor Decisions and Gender Stereotypes
+    The Effect of Television on Female Labor Outcomes\*   // Try to always add \* to the end
   ],
   authors: (
     (
@@ -16,12 +16,23 @@
     ),
     
   ),
+  paper_link: "https://jjgecon.github.io/assets/papers/JMP_Gonzalez_FEI_Telenovelas.pdf",
   abstract: [
-    #lorem(120)
+  I study the effect of female empowerment in media on female labor market outcomes using Latin American telenovelas.
+  Using generative AI, I construct a Female Empowerment Index (FEI) for these TV shows from 1960 to 2024.
+  I show that FEI exposure during the impressionable years increases the likelihood of labor force participation among Latin American women.
+  To identify the causal effect of FEI exposure, I implement an instrumental variables strategy using detailed data on television signal coverage in Mexico.
+  The causal estimates confirm the positive effect of FEI exposure, with an effect size comparable to previous studies.
+  Furthermore, FEI changes account for a significant fraction of the aggregate increase in female labor force participation observed over 2010-2020.
+  Moreover, both the emotional framing of narratives and the types of jobs depicted play an important role in shaping the effects.
     ],
   thanks: [
-    Thanks to Omer Ozak, Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi XXX for their feedback and support.. Thanks to Leonardo Sepulveda for invaluable research assitance and support. Special thanks to the SMU Economics Department Ph.D. students  
+    Thanks to Ömer Özak, Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi Liang, and Esteban Aleman for their feedback and support. Special thanks to Lucas Garcia dos Santos who helped in the validation sample in the early stages of the project. Leonardo Sepulveda and Amparo Olfos provided excellent research assistance.
+    Special thanks to the SMU Economics Department Ph.D. students and staff, as well as the O'Donnell Data Science and Research Computing Institute, for providing access to high-performance computing resources.
+    Leonardo Sepulveda provided excellent research assistance.
     ],
+  JEL_codes: [D91, J16, J22, L82, Z13],
+  keywords: [Media, Gender Gap, Social Norms, Latin America, Mass Media, Generative AI, Telenovelas],
 )
 
 #set par(justify: true)
@@ -34,7 +45,7 @@ This narrative evolution also mirrors broader conversations about gender equity 
 What if I cite @domenech-arumi_neighborhoods_2023
 
 #figure(
-  image("../../analysis/tables_figures/example_female_labor_market.png", width: 60%),
+  image("../../analysis/tables_figures/figure_x.svg", width: 60%),
   caption: [TV coverage of the 2020 election by state],
   // placement: bottom
 )
@@ -56,4 +67,4 @@ Therefore, what I do is to assume that station characteristics change little ove
 
 Localidad data comes from the National Institute of Statistics and Geography (INEGI) Geo (INEGI) and Labor Market data comes from mexico's Central Bank EconLab's Local Labor Markets micro data available in #link("https://www.banxico.org.mx/DataSetsWeb/dataset?ruta=LLM&idioma=en")[here] which combines both the National Survey of Occupation and Employment (ENOE) and the Census surveys in 1990, 2000, 2010, 2015, 2020.
 
-#bibliography("My Library.bib", style: "harvard-cite-them-right")
+#bibliography("../../bibliography/My Library.bib", style: "harvard-cite-them-right")
