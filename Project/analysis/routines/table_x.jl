@@ -3,7 +3,7 @@
 # for the project "Aggregate Costs of Women Misallocation of Talent"
 # Objective: replicate the LaTeX table X from the paper
 
-@load "model_data/optimum.jld2" x_minimizer
+@load path_processed_data * "model_data/optimum.jld2" x_minimizer
 x1 = @sprintf("%.2f", x_minimizer[1])
 x2 = @sprintf("%.2f", x_minimizer[2])
 

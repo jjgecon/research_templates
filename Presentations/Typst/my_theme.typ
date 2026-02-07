@@ -142,7 +142,9 @@
           breakable: false,
           { 
             set par(spacing: 0.4em)
+            v(1.6cm)
             text(size: 2em, fill: black, weight: "bold")[#info.title]
+            v(1em)
             if info.subtitle != none {
               parbreak()
               text(size: 1.2em, fill: black, info.subtitle)
@@ -150,15 +152,13 @@
           },
         )
 
-        if info.emoji_summary != none {
-          par()[
-          #set text(size: 3em)
-          #info.emoji_summary
-          ]
-        }
-        
+        // par()[
+        //   #set text(size: 3em)
+        //   #emoji.woman.crown #emoji.fairy #text(size:24pt)[vs.] #emoji.woman.crown #emoji.fist.front
+        //   ]
 
-        v(1em)
+        v(5em)
+
         set text(size: .8em)
         grid(
           columns: (1fr,) * calc.min(info.authors.len(), 3),
@@ -174,6 +174,15 @@
         if info.date != none {
           parbreak()
           text(size: .8em, utils.display-info-date(self))
+        }
+
+        if info.ai != none {
+          v(1fr)
+          block(width: 95%)[
+          #set text(size: .4em, fill: luma(60%))
+          #set align(left)
+          #set par(justify: true)
+          *Declaration of generative AI and AI-assisted technologies*: During the preparation of this work the author used generative AI models (e.g. ChatGPT, Gemini, and Undermind) in order to check grammar and spelling, search for related literature, coding support, and image generation. After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]
         }
       },
     )

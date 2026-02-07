@@ -1,2 +1,5 @@
 SMU_Letterhead_Template.docx
 .vscode/
+.DS_Store
+Thumbs.db
+*.log
