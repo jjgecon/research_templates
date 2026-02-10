@@ -2,6 +2,8 @@
 
 Welcome to my collection of templates for economic research! This repository gathers all the resources, templates, and boilerplate files I use for writing papers, presentations, posters, and more. The goal is to streamline the research workflow and provide ready-to-use starting points for a variety of academic outputs.
 
+Lately I have been mainly using Typst for both papers and presentations. It's main advantage over LaTeX it's real-time compilation time that allows me to iterate tables, figures, and slide decks. In addition, Typst error messages are super clear and in IDE like VS Code a simple click will lead you to the line with the error (in LaTeX you need to be an arquelogical expert to understand why your code dis not compile).
+
 ## Repository Structure
 
 ```
