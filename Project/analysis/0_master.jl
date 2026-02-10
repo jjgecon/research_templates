@@ -12,6 +12,7 @@ if Sys.isapple()
     println("MacOS Set-up...")
 
     Pkg.activate("analysis/.pkgs") 
+        Pkg.resolve()                     # Resolve any conflict in OS-specific dependencies
     Pkg.instantiate()
 
     path_data = "analysis/data/"
@@ -24,6 +25,7 @@ else
     println("HPC Set-up...")
 
     Pkg.activate(".pkgs") 
+    Pkg.resolve()                     # Resolve any conflict in OS-specific dependencies
     Pkg.instantiate()
 
     path_data = "data_hpc/"
