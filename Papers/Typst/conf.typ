@@ -93,7 +93,7 @@
       *Keywords:* #keywords
     ]
   line(length: 95%, stroke: 0.5pt)
-  par(first-line-indent: 1em, leading: 0.35em, justify: true)[#text(size: 8pt)[\*#thanks \ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.
+  par(first-line-indent: 1em, leading: 0.35em, justify: true)[#text(size: 8pt)[\*#thanks \ $""^(#sym.ast.double)$ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.
 After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]
 
   pagebreak()
@@ -131,6 +131,9 @@ After using this tool/service, the author reviewed and edited the content as nee
 
   // reset the page format to skip the number
   set page(margin: 2cm, columns: 1, numbering: "1")
+
+  // numbering of equations
+  set math.equation(numbering: "(1)")
 
   // whole doc bellow
   doc
