@@ -170,6 +170,13 @@ Now  we can also add a simple box with @m_prompt
 #bibliography("My Library.bib", style: "harvard-cite-them-right")
 
 // Appendix Begins here
+
+#show heading.where(level: 1): it => [
+  #set align(left)
+  #set text(weight: "bold")
+  #block(below: 1em)[#it.body]
+]
+
 = Appendix
 
 #show: backmatter
