@@ -104,15 +104,17 @@ After using this tool/service, the author reviewed and edited the content as nee
   // Heading settings
   set heading(numbering: "1.1")
 
-  // show heading.where(level: 1): it => [
-  //   #set align(center)
-  //   #set text(20pt, weight: "bold")
-  //   #block(below: 1em)[#smallcaps(it.body)]
-  //   ]
-  // show heading.where(level: 2): it => [
-  //   #set text(16pt, weight: "bold")
-  //   #block[#it]
-  //   ]
+  show heading.where(level: 1): it => [
+    #set align(left)
+    #set text(weight: "bold")
+    #block(below: 1em)[#it]
+  ]
+
+  show heading.where(level: 2): it => [
+    #set align(left)
+    #set text(weight: "bold")
+    #block(below: 1em)[#it]
+  ]
 
   // Link settings
   show link: set text(fill: p_blue)
