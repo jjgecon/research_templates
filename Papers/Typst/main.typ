@@ -36,7 +36,7 @@ Disney’s latest princess tales present protagonists who drive their own storie
 
 This narrative evolution also mirrors broader conversations about gender equity and inclusion, allowing Disney to engage a more diverse global audience, unlock new merchandising and social media opportunities, and bolster its reputation as an innovative storyteller. In our analysis, exposure to these empowered figures corresponds with a 12% increase in women’s labor force participation and a notable shift in young viewers’ professional goals.#footnote[#lorem(20)]
 
-What if I cite @domenech-arumi_neighborhoods_2023 #cite(<singh_novel_2022>, form: "prose")
+What if I cite @domenech-arumi_neighborhoods_2023 and then #cite(<singh_novel_2022>, form: "prose")
 
 = Data
 
@@ -164,7 +164,7 @@ Now  we can also add a simple box with @m_prompt
   #fig_notes(lorem(50))
  ]
 
-#bibliography("My Library.bib", style: "harvard-cite-them-right")
+#bibliography("My Library.bib", style: "econ.csl")
 
 // Appendix Begins here
 
