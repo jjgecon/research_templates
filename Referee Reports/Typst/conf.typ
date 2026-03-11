@@ -1,4 +1,3 @@
-// Put here all the extra packages that you 
 #import "@preview/elembic:1.1.1" as e: field, types
 #import "@preview/dashy-todo:0.1.3": todo
 #import "@preview/showybox:2.0.4": showybox
@@ -24,7 +23,70 @@
   box(l + h(-0.32em) + a + h(-0.13em) + TeX)
 }
 
-//  add a similar to the LaTeX paragraph
+#let reviwerC = e.element.declare(
+  "reviewer_comments",
+  doc: "box for the reviewer comments",
+  prefix: "@preview/my-package,v1",
+  reference: (
+    supplement: [Comment],
+    numbering: "1.1"
+  ),
+  display: it => 
+  showybox(
+    frame: (
+      border-color: black,
+      title-color: it.fill,
+      border-width: 1pt,
+    ),
+    title-style: (
+      color: black,
+      weight: "regular",
+      align: center
+    ),
+    title: [Comment #e.counter(it).display()])[
+    #set text(font: "Courier New", size: 10pt)
+    #it.body
+    ],
+  fields: (
+    field("body", types.option(content), doc: "Box contents", required: true),
+    field("fill", types.option(types.paint), doc: "Box fill", default: p_red.lighten(60%)),
+    field("stroke", types.option(stroke), doc: "Box border", default: red),
+  ),
+)
+
+#let mayor_mod(page_n: str, og: str, revised: str) = {
+  showybox(
+      breakable: true,
+      frame: (
+        border-color: black,
+        title-color: p_blue.lighten(60%),
+        border-width: 1pt,
+      ),
+      title-style: (
+        color: black,
+        weight: "regular",
+        align: center
+      ),
+    title: [Mayor Modification  at p.#page_n],
+    columns(1)[
+    #set text(size: 9pt)
+      #showybox(
+        breakable: true,
+        title-style: (color: black, weight: "regular", align: center),
+        frame: (title-color: p_blue.lighten(80%)),
+        title: "Original"
+      )[#og]
+      #showybox(
+        breakable: true,
+        title-style: (color: black, weight: "regular", align: center),
+        frame: (title-color: p_blue.lighten(80%)),
+        title: "Revised",
+      )[#revised]
+    ]
+  )
+}
+  
+
 #let sentence_start = e.element.declare(
   "sentence_start",
   doc: "sentence start similar to LaTeX",
@@ -35,49 +97,32 @@
   ),
 )
 
-// Create figure notes
-#let fig_notes(body_of_text, width: 100%, spacing: 0.8em) = {
-  box(inset: 1pt, width: width)[
-  #align(left)[
-  #set par(justify: true, leading: spacing)
-  #text(0.7em)[Notes: #body_of_text]
-  ]
-  ]
-}
-
-#let backmatter(content) = {
-	set heading(numbering: "A.1")
-	counter(heading).update(0)
-	state("backmatter").update(true)
-	content
-  }
-
 #let conf(
+  submission_n: none,
   title: none,
   subtitle: none,
   authors: (),
-  paper_link: none,
-  abstract: none,
-  thanks: none,
-  JEL_codes: none,
-  keywords: none,
   doc,
 ) = {
   // Global settings
   set page(margin: 2cm, 
-           columns: 1)
+           columns: 1,
+           numbering: "1")
 
- set text(font: "Palatino Linotype",
+  set text(font: "Palatino Linotype",
            size: 11pt)
 
   set align(center)
-  par(text(20pt, title ))
-  par(text(16pt, subtitle))
+  par(text(20pt, "Response to Reviewer Comments for"))
+  par(text(12pt, emph(title +  subtitle)))
+  if submission_n != none{
+    par(text(12pt, emph("Submission #" + submission_n)))
+  }
 
   let count = authors.len()
   let ncols = calc.min(count, 3)
   
-  v(1cm)
+  v(0.5cm)
 
   grid(
     columns: (1fr,) * ncols,
@@ -90,39 +135,15 @@
       #link("mailto:" + author.email)
     ]),
   )
+
+  v(.5cm)
   
   block()[
+    #set text(size:14pt)
     #datetime.today().display("[month repr:long] [year]")
-    
-    #link(paper_link)[
-    #text(fill: p_blue)[Latest Available Version]] 
     ]
-    
-  v(1cm)
-  block(
-    width: 85%,
-  )[
-    #text(size:16pt)[#smallcaps("Abstract")] \
-    #set align(left)
-    #par(justify: true)[
-     #text(size:11pt)[#abstract]
-    ]]
 
-  set align(left)
-  v(1fr)
-  par(justify: true)[
-    #set text(size: 10pt)
-      *JEL Clasification:* #JEL_codes\
-      *Keywords:* #keywords
-    ]
-  line(length: 95%, stroke: 0.5pt)
-  par(first-line-indent: 1em, leading: 0.35em, justify: true)[#text(size: 8pt)[\*#thanks \ $""^(#sym.ast.double)$ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.
-After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]
-
-  pagebreak()
-  
-  // Main configs after the title page
-  // colors
+  v(.5cm)
 
   // Heading settings
   set heading(numbering: "1.1")
@@ -130,7 +151,7 @@ After using this tool/service, the author reviewed and edited the content as nee
   show heading.where(level: 1): it => [
     #set align(left)
     #set text(weight: "bold")
-    #block(below: 1em)[#it]
+    #block(below: 1em)[#it.body]
   ]
 
   show heading.where(level: 2): it => [
@@ -150,18 +171,13 @@ After using this tool/service, the author reviewed and edited the content as nee
 
   // Paragraph settings
   set par(justify: true, first-line-indent:2em)
-  
+  set align(left)
   // Editing Mode: Uncomment the next line to see the text with bigger paragraph spacing
   // set par(leading: 1.5em, spacing: 2em)
 
-  // reset the page format to skip the number
-  set page(margin: 2cm, columns: 1, numbering: "1")
-
   // numbering of equations
   set math.equation(numbering: "(1)")
-
+  
   // whole doc bellow
   doc
 }
-
-

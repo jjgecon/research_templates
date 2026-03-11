@@ -1,5 +1,8 @@
 #import "conf.typ": *
 
+// COMMENT THE NEXT 2 LINES TO HIDE THE DRAFTING NOTES AND OUTLINE
+#outline(title: "TODOs", target: figure.where(kind: "todo"))
+
 #show: conf.with(
   title: [
     The Disney Princess Effect:
@@ -27,12 +30,6 @@
   JEL_codes: [H11, H23, N16, P16, L82],
   keywords: [ Redistribution, Media, Latin America, Inequality, Perceptions, Telenovelas ],
 )
-
-#set par(justify: true)
-
-// COMMENT THE NEXT 2 LINES TO HIDE THE DRAFTING NOTES AND OUTLINE
-#outline(title: "TODOs", target: figure.where(kind: "todo"))
-#pagebreak()
 
 = Introduction
 Disney’s latest princess tales present protagonists who drive their own stories—solving challenges, leading communities, and pursuing personal growth—rather than waiting to be rescued. Empirical studies show that children who see these agency‑driven characters develop higher self‑esteem and expand their career aspirations.
@@ -86,13 +83,13 @@ Localidad data comes from the National Institute of Statistics and Geography (IN
 Some math here just to check how does it look
 
 
-$ y_(o w l c) = alpha*X^(prime)_(o w) + delta_(o w) + epsilon_(o w l c) $
+$ y_(o w l c) = alpha*X^(prime)_(o w) + delta_(o w) + epsilon_(o w l c) $ <main_eq>
 
 Even you can do colors in math!
 
 $ x = #text(fill: p_red)[$a + b + 10$] $
 
-#lorem(200)
+Let @main_eq show, #lorem(200)
 
 #figure(
   image("test_img.jpeg", width: 30%),

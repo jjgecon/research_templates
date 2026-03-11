@@ -1,8 +1,9 @@
-#import "conf.typ": conf
+#import "conf.typ": *
 
 
 #show: conf.with(
   uni_logo: "../0_media/SMULogo_InformalPeruna_digitalonly_BR.png",
+  uni_logo_size: 60%,
   university: "Southern Methodist University",
   college: "Deadman College of Humanities and Science",
   department: "Department of Economics",  
@@ -13,6 +14,16 @@
       email: "gonzalezjj@smu.edu",
       position: "Economics Ph.D. Candidate",
   ),
+  main_c: smu_red,
+  foot_here: [
+            #set align(center)
+            #text(fill: smu_red, weight: "bold")[
+              World Changes Shaped Here
+            ] \
+            #text(size:9pt)[
+              Southern Methodist University | PO Box 750116   |   Dallas TX 75275-0116   |   214-768-2562   |   Fax 214-768-1611
+            ]
+           ],
 )
 
 #lorem(250)

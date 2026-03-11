@@ -1,0 +1,16 @@
+#table(
+  columns: (auto, auto, auto, auto, auto),
+  rows: (1.15cm, auto, auto, auto, auto),
+  align: (left + horizon, center + horizon, center + horizon, center + horizon, center + horizon),
+  stroke: none, 
+  fill: (col, row) => if col == 4 { yellow } else { none },
+ table.hline(stroke: 2pt, position: top),
+ table.header([Year], [Same birth state], [Same muni. (t-5)], [Mexican Sample], [New Column]),
+ table.hline(),
+  [1990], [0.83], [--], [8.1m], [0.45],
+  [2000], [0.81], [0.82], [10.0m], [0.52],
+  [2010], [0.82], [0.83], [11.8m], [0.38],
+  [2015], [0.83], [0.85], [22.4m], [0.61],
+  [2020], [0.83], [0.86], [14.9m], [0.47],
+ table.hline(stroke: 2pt),
+)

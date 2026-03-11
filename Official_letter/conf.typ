@@ -2,19 +2,23 @@
 // Configuration Settings by Javier Gonzalez
 // For an updates version please see https://github.com/jjgecon/research_templates
 
+// Global settings
+// colors
+#let smu_red =  rgb(170, 18, 49)
+#let smu_blue = rgb(52,67,148)
+
 #let conf(
   uni_logo: none,
+  uni_logo_size: 100%,
   university: none,
   college: none,
   department: none, 
   recepient: none,
   author: (),
+  main_c: smu_red,
+  foot_here: none,
   doc,
 ) = {
-  // Global settings
-  // colors
-  let smu_red =  rgb(170, 18, 49)
-  let smu_blue = rgb(52,67,148)
 
   // Header
   
@@ -45,22 +49,14 @@
   set page(margin: (top: 5cm, bottom: 3.5cm, rest: 2cm), columns: 1, numbering: "1",
            header: [
             #grid(columns: (1fr, 2fr), align: (left, horizon + right), 
-            [#image(uni_logo, width: 60%)],
-            [#text(fill: smu_red, weight: "bold")[
+            [#image(uni_logo, width: uni_logo_size)],
+            [#text(fill: main_c, weight: "bold")[
               #college] \ #department
             ])            
-            ], 
-           footer: [
-            #set align(center)
-            #text(fill: smu_red, weight: "bold")[
-              World Changes Shaped Here
-            ] \
-            #text(size:9pt)[
-              Southern Methodist University | PO Box 750116   |   Dallas TX 75275-0116   |   214-768-2562   |   Fax 214-768-1611
-            ]
-           ])
+            ],
+           footer: foot_here)
 
-  set text(size: 12pt, font: "Georgia")
+  set text(size: 12pt, font: "Palatino Linotype")
   datetime.today().display("[month repr:long] [day], [year]")
   par()[
     #set align(left)
