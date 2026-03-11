@@ -3,12 +3,14 @@
 // COMMENT THE NEXT 2 LINES TO HIDE THE DRAFTING NOTES AND OUTLINE
 #outline(title: "TODOs", target: figure.where(kind: "todo"))
 
+#show: e.prepare()
+
 #show: conf.with(
   title: [
-    The Disney Princess Effect:
+    Does Watching Women Work, Work?
   ],
   subtitle: [
-    Female Labor Decisions and Gender Stereotypes on TV\*   // Try to always add \* to the end
+    The Effect of Television on Female Labor Outcomes   // Try to always add \* to the end
   ],
   authors: (
     (
@@ -18,17 +20,23 @@
     ),
     
   ),
-  paper_link: "https://jjgecon.github.io/",
+  paper_link: "https://jjgecon.github.io/assets/papers/JMP_Gonzalez_FEI_Telenovelas.pdf",
   abstract: [
-    #lorem(120)
+  I study the effect of female empowerment in media on female labor market outcomes using Latin American telenovelas.
+  Using generative AI, I construct a Female Empowerment Index (FEI) for these TV shows from 1960 to 2024.
+  I show that FEI exposure during the impressionable years increases the likelihood of labor force participation among Latin American women.
+  To identify the causal effect of FEI exposure, I implement an instrumental variables strategy using detailed data on television signal coverage in Mexico.
+  The causal estimates confirm the positive effect of FEI exposure, with an effect size comparable to previous studies.
+  Furthermore, FEI changes account for a significant fraction of the aggregate increase in female labor force participation observed over 2010-2020.
+  Moreover, both the emotional framing of narratives and the types of jobs depicted play an important role in shaping the effects.
     ],
   thanks: [
-    Thanks to Omer Ozak, Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi Liang for their feedback and support. 
-    Thanks to Leonardo Sepulveda for invaluable research assistance and support. 
-    Special thanks to the SMU Economics Department Ph.D. students and staff.
+    Thanks to Ömer Özak, Klaus Desmet, Wookum Kim, Ivan de las Heras, Rouzhi Liang, Esteban Aleman, Nicolás de Roux, and seminar participants at various seminars in the Universidad de los Andes, Pontificia Universidad Católica de Chile, UNSW, 95th SEA Meeting. Special thanks to Lucas Garcia dos Santos who helped in the validation sample in the early stages of the project. Leonardo Sepulveda and Amparo Olfos provided excellent research assistance.
+    Special thanks to the SMU Economics Department Ph.D. students and staff, as well as the O'Donnell Data Science and Research Computing Institute, for providing access to high-performance computing resources.
+    Leonardo Sepulveda provided excellent research assistance.
     ],
-  JEL_codes: [H11, H23, N16, P16, L82],
-  keywords: [ Redistribution, Media, Latin America, Inequality, Perceptions, Telenovelas ],
+  JEL_codes: [D91, J16, J22, L82, Z13],
+  keywords: [Media, Gender Gap, Social Norms, Latin America, Mass Media, Generative AI, Telenovelas],
 )
 
 = Introduction
@@ -95,6 +103,8 @@ Let @main_eq show, #lorem(200)
   image("test_img.jpeg", width: 30%),
   caption: [A curious figure.],
 ) <ai_figure>
+
+#lorem(500)
 
 As you can see in @ai_figure a representation of the main idea and in @internal_migration a table showing that internal migration is not a problem in mexico.
 
@@ -164,7 +174,11 @@ Now  we can also add a simple box with @m_prompt
   #fig_notes(lorem(50))
  ]
 
+#pagebreak()
+
 #bibliography("My Library.bib", style: "econ.csl")
+
+#pagebreak()
 
 // Appendix Begins here
 

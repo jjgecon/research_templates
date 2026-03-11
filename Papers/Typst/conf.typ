@@ -8,22 +8,6 @@
 #let p_green = rgb(79, 121, 66)
 #let p_yellow = rgb(186,137,104)
 
-// LaTeX logos
-#let TeX = {
-  set text(font: "New Computer Modern",)
-  let t = "T"
-  let e = text(baseline: 0.22em, "E")
-  let x = "X"
-  box(t + h(-0.14em) + e + h(-0.14em) + x)
-}
-
-#let LaTeX = {
-  set text(font: "New Computer Modern")
-  let l = "L"
-  let a = text(baseline: -0.35em, size: 0.66em, "A")
-  box(l + h(-0.32em) + a + h(-0.13em) + TeX)
-}
-
 //  add a similar to the LaTeX paragraph
 #let sentence_start = e.element.declare(
   "sentence_start",
@@ -34,6 +18,7 @@
     field("body", types.option(content), doc: "Box contents", required: true),
   ),
 )
+
 
 // Create figure notes
 #let fig_notes(body_of_text, width: 100%, spacing: 0.8em) = {
@@ -67,12 +52,32 @@
   set page(margin: 2cm, 
            columns: 1)
 
- set text(font: "Palatino Linotype",
+  set text(font: "Palatino Linotype",
            size: 11pt)
 
+  // Footnote settings
+  show footnote.entry: it => {
+    set align(left)
+    set text(0.8em)
+    set par(justify: true)
+    // This 'it' represents the footnote content itself
+    it
+  }
+
+  set footnote.entry(
+    separator: align(left)[#line(length: 30%, stroke: 0.5pt)]
+  )
+
+  // Title set-up
   set align(center)
   par(text(20pt, title ))
-  par(text(16pt, subtitle))
+  // par()[#text(16pt)[#subtitle] #footnote(numbering: "*")[#align(left)[#par(justify: true)[#text(0.8em)[#thanks \ $""^(#sym.ast.double)$ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]]]]
+  par()[
+  #set text(16pt)
+  #subtitle
+  #footnote(numbering: "*")[#thanks] #h(.03cm) #footnote(numbering: "*")[During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.
+    ]
+  ]
 
   let count = authors.len()
   let ncols = calc.min(count, 3)
@@ -115,9 +120,6 @@
       *JEL Clasification:* #JEL_codes\
       *Keywords:* #keywords
     ]
-  line(length: 95%, stroke: 0.5pt)
-  par(first-line-indent: 1em, leading: 0.35em, justify: true)[#text(size: 8pt)[\*#thanks \ $""^(#sym.ast.double)$ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.
-After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]
 
   pagebreak()
   
@@ -127,17 +129,15 @@ After using this tool/service, the author reviewed and edited the content as nee
   // Heading settings
   set heading(numbering: "1.1")
 
-  show heading.where(level: 1): it => [
-    #set align(left)
-    #set text(weight: "bold")
-    #block(below: 1em)[#it]
-  ]
-
-  show heading.where(level: 2): it => [
-    #set align(left)
-    #set text(weight: "bold")
-    #block(below: 1em)[#it]
-  ]
+  // show heading.where(level: 1): it => [
+  //   #set align(center)
+  //   #set text(20pt, weight: "bold")
+  //   #block(below: 1em)[#smallcaps(it.body)]
+  //   ]
+  // show heading.where(level: 2): it => [
+  //   #set text(16pt, weight: "bold")
+  //   #block[#it]
+  //   ]
 
   // Link settings
   show link: set text(fill: p_blue)
