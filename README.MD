@@ -9,6 +9,12 @@ Lately I have been mainly using Typst for both papers and presentations. It's ma
 ```
 research_templates/
 │
+├── 0_media/           # Images and media for documentation
+│
+├── Codes/             # Base scripts/snippets (Julia and Python)
+│
+├── Official_letter/   # Official letter templates (Typst)
+│
 ├── Papers/
 │   ├── LaTeX/         # LaTeX templates for academic papers
 │   ├── LyX/           # LyX templates for papers
@@ -16,21 +22,17 @@ research_templates/
 │
 ├── Presentations/
 │   ├── LyX/           # LyX templates for presentations
-│   ├── PPT/           # PowerPoint poster templates
+│   ├── Posters/       # Poster templates (LaTeX and PPT)
 │   ├── TikZ/          # TikZ code for timelines and figures
 │   └── Typst/         # Typst templates for presentations
 │
-├── Posters/
-│   ├── Latex/         # LaTeX poster templates (landscape/portrait)
-│   └── PPT/           # PowerPoint poster templates
-│
-├── Printouts/         # LyX printout templates for handouts/notes
+├── Printouts/         # Printout templates (Exams, Homeworks, Solutions)
 │
 ├── Project/           # Example project structure for research projects
 │
-├── Referee Reports/   # Templates for referee reports and responses
+├── Referee Reply/     # Templates for referee responses
 │
-├── 0_media/           # Images and media for documentation
+├── Referee Report/    # Templates for referee reports
 │
 └── README.MD          # This file
 ```
@@ -44,11 +46,19 @@ research_templates/
 
 ### Presentations
 - **LyX**: Presentation templates in LyX for academic talks.
-- **PPT**: PowerPoint poster templates (landscape and portrait).
+- **Posters**: Poster templates grouped under LaTeX and PowerPoint formats.
 - **TikZ**: Example TikZ code for timelines and custom figures.
 - **Typst**: Typst templates for presentations, including custom themes and sample images.
 
-### Posters
+### Codes
+- Reusable base scripts/snippets for common workflows in Julia and Python.
+- Useful as quick starters for new empirical or data-processing tasks.
+
+### Official_letter
+- Typst templates for formal institutional letters.
+- Includes ready-to-edit files for commonly used letter formats.
+
+### Posters (under Presentations)
 
 Taken from [https://betterposters.blogspot.com/](https://betterposters.blogspot.com/) by Zen Faulkes
 
@@ -56,13 +66,18 @@ Taken from [https://betterposters.blogspot.com/](https://betterposters.blogspot.
 - **PPT**: PowerPoint poster templates for conferences.
 
 ### Printouts
-- LyX templates for printing handouts, homework notes, and teaching materials.
+- LyX and Typst templates for exams, homework notes, solutions, and teaching handouts.
 
 ### Project
 - Example folder structure for organizing research projects, including code, data, analysis scripts, and write-ups.
 
-### Referee Reports
-- Templates for writing referee reports and responses, with LaTeX and LyX examples, plus extra files for tables and custom commands.
+### Referee Reply
+- Templates for writing structured replies to referee comments.
+- Includes both LaTeX and Typst variants for response documents.
+
+### Referee Report
+- Templates focused on writing referee reports.
+- Organized for concise evaluation notes and recommendation-focused writing.
 
 ### 0_media
 - Central location for images and media used in documentation and templates.
@@ -75,19 +90,23 @@ Taken from [https://betterposters.blogspot.com/](https://betterposters.blogspot.
 - **TikZ**: For custom figures and timelines.
 
 ## Resource Gallery
-Below are example images of the templates and resources included in this repository. (Add your own screenshots or sample outputs to the `0_media/` folder and reference them here.)
+Below are example images of the templates and resources included in this repository. 
 
-| Resource Type         | Example Image                                  |
-|----------------------|------------------------------------------------|
-| LaTeX Paper          | ![LaTeX Paper](0_media/latex_paper_example.png) |
-| LyX Paper            | ![LyX Paper](0_media/lyx_paper_example.png)     |
+
+| Resource Type         | Example Image |
+|----------------------|---------------|
+| LaTeX Paper          | ![LaTeX Paper](0_media/latex_paper_example.png)  |
+| LyX Paper            | ![LyX Paper](0_media/lyx_paper_example.png) |
 | Typst Paper          | ![Typst Paper](0_media/typst_paper_example.png) |
 | LyX Presentation     | ![LyX Pres](0_media/lyx_presentation.png)       |
 | Typst Presentation   | ![Typst Pres](0_media/typst_presentation.png)   |
 | LaTeX Poster         | ![LaTeX Poster](0_media/latex_poster.png)       |
 | PPT Poster           | ![PPT Poster](0_media/ppt_poster.png)           |
 | TikZ Timeline        | ![TikZ Timeline](0_media/tikz_timeline.png)     |
-
+| Official Letter      | ![Official Letter Placeholder](https://placehold.co/800x450?text=Official+Letter+Template) |
+| Printouts            | ![Printouts Placeholder](https://placehold.co/800x450?text=Printouts+Templates) |
+| Referee Reply        | ![Referee Reply Placeholder](https://placehold.co/800x450?text=Referee+Reply+Template) |
+| Referee Report       | ![Referee Report Placeholder](https://placehold.co/800x450?text=Referee+Report+Template) |
 
 ---
 

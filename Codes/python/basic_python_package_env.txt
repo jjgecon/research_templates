@@ -1,0 +1,1 @@
+mamba create --name SOME_NAME numba cython statsmodels sympy seaborn scipy ipykernel ipyparallel ipython ipython_genutils ipywidgets jupyter matplotlib-base matplotlib networkx numpy openpyxl pandas-datareader unidecode urllib3 xlrd json

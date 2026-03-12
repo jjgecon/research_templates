@@ -1,0 +1,3 @@
+conda create -n gen_ai python=3.12
+conda activate gen_ai
+pip install python-dotenv openai pandas numpy tiktoken tqdm jupyter ipywidgets pydantic
