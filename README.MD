@@ -11,7 +11,9 @@ research_templates/
 │
 ├── 0_media/           # Images and media for documentation
 │
-├── Codes/             # Base scripts/snippets (Julia and Python)
+├── Codes/
+│   ├── julia/         # Julia base templates, environments, and utility modules
+│   └── python/        # Python base templates, environment setup, and utilities
 │
 ├── Official_letter/   # Official letter templates (Typst)
 │
@@ -51,8 +53,9 @@ research_templates/
 - **Typst**: Typst templates for presentations, including custom themes and sample images.
 
 ### Codes
-- Reusable base scripts/snippets for common workflows in Julia and Python.
-- Useful as quick starters for new empirical or data-processing tasks.
+- Language-specific starter resources for reproducible coding workflows.
+- **julia/**: Base script template, environment notes, and helper modules in utils/ (file ops, plotting settings, shared utilities).
+- **python/**: Base script template, package/environment setup examples (venv, uv, mamba), and utility helpers in utils/.
 
 ### Official_letter
 - Typst templates for formal institutional letters.
@@ -103,10 +106,10 @@ Below are example images of the templates and resources included in this reposit
 | LaTeX Poster         | ![LaTeX Poster](0_media/latex_poster.png)       |
 | PPT Poster           | ![PPT Poster](0_media/ppt_poster.png)           |
 | TikZ Timeline        | ![TikZ Timeline](0_media/tikz_timeline.png)     |
-| Official Letter      | ![Official Letter Placeholder](https://placehold.co/800x450?text=Official+Letter+Template) |
-| Printouts            | ![Printouts Placeholder](https://placehold.co/800x450?text=Printouts+Templates) |
-| Referee Reply        | ![Referee Reply Placeholder](https://placehold.co/800x450?text=Referee+Reply+Template) |
-| Referee Report       | ![Referee Report Placeholder](https://placehold.co/800x450?text=Referee+Report+Template) |
+| Official Letter      | ![Official Letter Placeholder](0_media/official_letter.png) |
+| Printouts            | ![Printouts Placeholder](0_media/print_outs.png) |
+| Referee Reply        | ![Referee Reply Placeholder](0_media/referee_reply.png) |
+| Referee Report       | ![Referee Report Placeholder](0_media/referee_report.png) |
 
 ---
 
