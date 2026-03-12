@@ -41,25 +41,4 @@ The paper could be improved in two ways. First by modifying the abstract and int
 = Minor Comments
 -	There is little discussion on how uber drivers get a negative return to work intensity (Section 3.3.1). Providing a plausible story could help readers understand the negative returns.
 -	To provide more insight into the composition of tenure between genders they could present Figure 4 for January of each year within their sample (2015, 2016, and 2017). Changes in the composition of tenure over time might give some insight into how the gender gap evolves over time in the ridesharing industry.
--	In the conclusion, the authors state: “Importantly, we do not find women to be disadvantaged by three factors that one might expect to contribute to a gender wage gap: …, preferences or constraints affecting specific hours worked, …” Then they say that given “…, flexible environment of the gig economy, gender-based preferences/constraints (especially the value of time not spent at paid work and, for drivers, preferences for driving speed) can open gender earnings gaps.” Rewording the preferences/constraints to specifics as hours worked and the value of time between gender could avoid any confusion.
-
-#pagebreak()
-
-#editor_note(
-  author: (
-    name: "Javier Gonzalez",
-    affiliation: "University of Zurich",
-    email: "XXXXXXX"
-  ),
-  letter: [
-    Thank you for allowing me to review the paper “The Gender Earnings Gap in the Gig Economy: Evidence from over a Million Rideshare Drivers” for publication in insert reputable journal. I recommend an accept with minor changes.
-
-    Using data from Uber drivers in the U.S. between January 2015 and March 2017, they estimate an earnings gender gap of 7% of Uber drivers in the U.S. and a 4% earnings gap of Uber drivers in the city of Chicago. Focusing on Chicago, the gap can be completely decomposed by the differences in when, where, and how fast male and women uber drivers drive. Male drivers tend to drive: (i) at the most profitable time (usually late at night), (ii) in zones where it's more profitable, and (iii) faster. These three components allow men to gain more on-the-job experience by completing more trips, thus enjoying the high returns to accumulated experience.
-
-    Uber is the ideal setting to explore the gender pay gap and labor market returns to experience. Allowing them to avoid typical discrimination problems in the traditional labor market. In addition, they show how typical proxies for on-the-job experience can overstate the importance of the returns of work intensity.  
-
-    The combination of the painstaking work, the unique setting, and the contribution to the literature on earnings gender gaps meet the standards for research in a high-quality journal.
-
-    A modified version of the abstract and the introduction incorporating some details of their methods could avoid my main concern that the authors are overselling the main findings of the paper making the readers believe that the gender gap decomposition is at the U.S. level and not at the city level.
-  ]
-)
+-	In the conclusion, the authors state: "Importantly, we do not find women to be disadvantaged by three factors that one might expect to contribute to a gender wage gap: …, preferences or constraints affecting specific hours worked, …" Then they say that given "…, flexible environment of the gig economy, gender-based preferences/constraints (especially the value of time not spent at paid work and, for drivers, preferences for driving speed) can open gender earnings gaps." Rewording the preferences/constraints to specifics as hours worked and the value of time between gender could avoid any confusion.

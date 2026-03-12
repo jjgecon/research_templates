@@ -115,7 +115,7 @@ As you can see in @ai_figure a representation of the main idea and in @internal_
 
 ] <internal_migration>
 
-Now  we can also add a simple box with @m_prompt
+Now  we can also add a simple box with @m_prompt #todo[might want to implement `block` with `elembic`]
 
 #figure(caption: [asdasd], supplement: [Block], kind: "block")[
   #showybox(

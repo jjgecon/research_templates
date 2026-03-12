@@ -33,28 +33,6 @@
   ),
 )
 
-#let editor_note(
-  author: (),
-  letter: none
-) = {
-  [
-    #set page(numbering: none)
-    
-    Dear Editor,
-    #v(.2cm)
-
-    #letter
-
-    #v(1cm)
-
-    #set par(first-line-indent:0pt, leading: .7em)
-
-    #author.name \
-    #author.affiliation \
-    #author.email
-  ]
-}
-
 #let conf(
   submission_n: none,
   title: none,
@@ -70,18 +48,13 @@
            size: 11pt)
 
   // set align(center)
-  par(text(18pt, "Referee Report for"))
+  par(text(18pt, "Referee Report"))
   par(text(12pt, emph(title +  subtitle)))
-  if submission_n != none{
-    par(text(12pt, emph("Submission #" + submission_n)))
+  if submission_n != none {
+    [Submission #text(12pt, emph("#" + submission_n))
+    
+     #datetime.today().display("[month repr:long] [year]") ]
   }
-
-  v(.5cm)
-  
-  block()[
-    #set text(size:14pt)
-    #datetime.today().display("[month repr:long] [year]")
-    ]
 
   v(.5cm)
 

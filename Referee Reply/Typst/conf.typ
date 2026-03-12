@@ -113,11 +113,9 @@
            size: 11pt)
 
   set align(center)
-  par(text(20pt, "Response to Reviewer Comments for"))
+  par(text(20pt, "Replies for #" + submission_n))
   par(text(12pt, emph(title +  subtitle)))
-  if submission_n != none{
-    par(text(12pt, emph("Submission #" + submission_n)))
-  }
+
 
   let count = authors.len()
   let ncols = calc.min(count, 3)
