@@ -278,7 +278,7 @@
   aspect-ratio: "16-9",
   header: none,
   header-right: self => self.info.logo,
-  footer: "",
+  footer: none,
   // footer: "Javier Gonzalez - SMU - gonzalezjj@smu.edu",
   footer-right: context utils.slide-counter.display() + " / " + utils.last-slide-number,
   // Define theme colors with defaults
@@ -291,7 +291,7 @@
   show: touying-slides.with(
     config-page(
       paper: "presentation-" + aspect-ratio,
-      margin: 2em,
+      margin: (top: 1.2em, bottom: 1.5em, left: 2em, right: 2em),
       footer-descent: 0em,
     ),
     config-common(

@@ -16,6 +16,7 @@
     author: [Javier Gonzalez],
     date: datetime.today(),
     institution: [Southern Methodist University],
+    ai: []
   )
 )
 
@@ -111,13 +112,13 @@
   #align(center)[
   ```typst
   #linkbox()[
-    #ref(<main_colors>, supplement: "to colors", form: "page")
+    #link(<main_colors>)[back or whatever you want to put here]
   ]
   ```
   ]
   #place(left + bottom)[
     #linkbox()[
-      #ref(<main_colors>, supplement: "to colors", form: "page")
+      #link(<main_colors>)[back]
   ]]
 ]
 
@@ -137,7 +138,7 @@
     #set text(12pt)
     #show link: set text(fill: black)
     #place(center + horizon)[
-    #v(1cm)
+    #v(3cm)
     #figure(
       image("test_img.jpeg", width: 100%),
       )  
