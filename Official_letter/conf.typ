@@ -86,6 +86,4 @@
     #university \
     #author.email \
   ]
-  v(2cm)
-  line(end:(50%,0%))
 }

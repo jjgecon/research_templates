@@ -13,7 +13,8 @@
   ],
   subtitle: [
     Female Labor Decisions and Gender Stereotypes on TV   // Try to always add \* to the end
-  ]
+  ],
+  authors: ()
 )
 
 = Summary

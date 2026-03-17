@@ -11,7 +11,7 @@
   author: (
       name: "Javier Gonzalez",
       address: "Plattenstrasse 14, CH-8032; Zurich, Switzerland", // Always separate by `;` to create a new line
-      email: "XXXX",
+      email: "xxxxxx@uzh.ch",
       position: "Postdoctotal Researcher",
   ),
   main_c: black,

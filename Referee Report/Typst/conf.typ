@@ -37,19 +37,29 @@
   submission_n: none,
   title: none,
   subtitle: none,
+  authors: none,
   doc,
 ) = {
   // Global settings
+  let my_footer = if authors != none {
+    set text(10pt)
+    emph(authors.join(", "))
+  } else {
+    ""
+  }
+
   set page(margin: 2cm, 
            columns: 1,
-           numbering: "1")
+           numbering: "1",
+           footer: my_footer)
 
   set text(font: "Palatino Linotype",
            size: 11pt)
 
   // set align(center)
-  par(text(18pt, "Referee Report"))
-  par(text(12pt, emph(title +  subtitle)))
+  par(text(18pt, title))
+  par(text(12pt, emph(subtitle)))
+
   if submission_n != none {
     [Submission #text(12pt, emph("#" + submission_n))
     
