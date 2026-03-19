@@ -70,14 +70,23 @@
 
   // Title set-up
   set align(center)
-  par(text(20pt, title ))
   // par()[#text(16pt)[#subtitle] #footnote(numbering: "*")[#align(left)[#par(justify: true)[#text(0.8em)[#thanks \ $""^(#sym.ast.double)$ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]]]]
-  par()[
-  #set text(16pt)
-  #subtitle
-  #footnote(numbering: "*")[#thanks] #h(.03cm) #footnote(numbering: "*")[During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.
+  if subtitle == none {
+    [
+    #set text(20pt)
+    #title
+    #footnote(numbering: "*")[#thanks] #h(.03cm) #footnote(numbering: "*")[During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.
+      ]
     ]
-  ]
+  } else {
+    [
+      #text(20pt, title) \
+      #set text(16pt)
+      #subtitle
+      #footnote(numbering: "*")[#thanks] #h(.03cm) #footnote(numbering: "*")[During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.
+    ]
+    ]
+  }
 
   let count = authors.len()
   let ncols = calc.min(count, 3)
