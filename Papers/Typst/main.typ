@@ -51,6 +51,10 @@
 
 #include "sections/emp_strat.typ"
 
+== Something else
+
+=== Something else again
+
 #pagebreak()
 
 #bibliography("My Library.bib", style: "econ.csl")

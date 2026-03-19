@@ -26,7 +26,7 @@ Channel that own the rights to broadcast have been matched using the #link("http
     #text(size: 8pt)[
     #include("../../../0_media/ensamble_heterogeneity.typ")
   ] // used to reduce the width of the table 
-  #fig_notes(width: 90%)[
+  #fig_notes(width: 100%, font_size: .5em)[
     The outcome variable is the individuals answer to the following statement: “The (Country) government should implement strong policies to reduce income inequality between the rich and the poor.” An answer of 7 indicates strong agreement and 1 strong disagreement with the previous statement. I consider respondent with Income < 100 if they earn less than 100 U.S. dollars every month, and those that Perc. Low Class if they classify themselves as low-middle class or low class. Left Wing are those individuals that have a political leaning from 1 (left) to 10 (right) less than 4. High Political Interest refers to those individuals that have at least some interest in politics. Controls: gender, age, urban, employment status, education, religion, income, marital status, and a time trend. Clustered standard errors at the interview date level are showed in parenthesis.]
     ] 
   ]

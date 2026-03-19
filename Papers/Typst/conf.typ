@@ -21,11 +21,11 @@
 
 
 // Create figure notes
-#let fig_notes(body_of_text, width: 100%, spacing: 0.8em) = {
+#let fig_notes(body_of_text, width: 100%, spacing: 0.8em, font_size: 0.7em) = {
   box(inset: 1pt, width: width)[
   #align(left)[
   #set par(justify: true, leading: spacing)
-  #text(0.7em)[Notes: #body_of_text]
+  #text(font_size)[Notes: #body_of_text]
   ]
   ]
 }
@@ -46,6 +46,7 @@
   thanks: none,
   JEL_codes: none,
   keywords: none,
+  editing: none,
   doc,
 ) = {
   // Global settings
@@ -53,7 +54,7 @@
            columns: 1)
 
   set text(font: "Palatino Linotype",
-           size: 11pt)
+           size: 12pt)
 
   // Footnote settings
   show footnote.entry: it => {
@@ -70,7 +71,6 @@
 
   // Title set-up
   set align(center)
-  // par()[#text(16pt)[#subtitle] #footnote(numbering: "*")[#align(left)[#par(justify: true)[#text(0.8em)[#thanks \ $""^(#sym.ast.double)$ During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature, and coding support.After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]]]]
   if subtitle == none {
     [
     #set text(20pt)
@@ -79,7 +79,8 @@
       ]
     ]
   } else {
-    [
+    [ 
+      #set par(leading: 1.5em, spacing: 2em)
       #text(20pt, title) \
       #set text(16pt)
       #subtitle
@@ -133,20 +134,13 @@
   pagebreak()
   
   // Main configs after the title page
-  // colors
 
   // Heading settings
   set heading(numbering: "1.1")
 
-  // show heading.where(level: 1): it => [
-  //   #set align(center)
-  //   #set text(20pt, weight: "bold")
-  //   #block(below: 1em)[#smallcaps(it.body)]
-  //   ]
-  // show heading.where(level: 2): it => [
-  //   #set text(16pt, weight: "bold")
-  //   #block[#it]
-  //   ]
+  show heading: it => [
+    #block(below: 1em)[#it]
+    ]
 
   // Link settings
   show link: set text(fill: p_blue)
@@ -158,13 +152,18 @@
   set table(stroke:none)
 
   // Paragraph settings
-  set par(justify: true, first-line-indent:2em)
+  set par(justify: true, 
+          first-line-indent:2em, 
+          leading: 1.5em, 
+          spacing: 2em)
   
   // Editing Mode: Uncomment the next line to see the text with bigger paragraph spacing
-  // set par(leading: 1.5em, spacing: 2em)
+  if editing != none {
+      set par.line(numbering: n => text(gray, font: "Verdana", size: 10pt)[#n])
+  }
 
   // reset the page format to skip the number
-  set page(margin: 2cm, columns: 1, numbering: "1")
+  set page(margin: 1in, columns: 1, numbering: "1")
 
   // numbering of equations
   set math.equation(numbering: "(1)")
