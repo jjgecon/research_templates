@@ -13,7 +13,23 @@
   "sentence_start",
   doc: "sentence start similar to LaTeX",
   prefix: "@preview/my-package,v1",
-  display: it => text(weight: "bold")[#it.body #h(.2cm)] ,
+  display: it => context {
+    let raw-indent = par.first-line-indent
+    
+    // Extract the length whether it's stored in a dictionary or natively
+    let indent-amount = if type(raw-indent) == dictionary {
+      raw-indent.amount
+    } else {
+      raw-indent
+    }
+    
+    // Apply the negative space
+    if indent-amount != none {
+      h(-indent-amount) 
+    }
+    
+    text(weight: "bold")[#it.body #h(.2cm)]
+  },
   fields: (
     field("body", types.option(content), doc: "Box contents", required: true),
   ),
@@ -54,7 +70,7 @@
            columns: 1)
 
   set text(font: "Palatino Linotype",
-           size: 12pt)
+           size: 11pt)
 
   // Footnote settings
   show footnote.entry: it => {
@@ -120,13 +136,13 @@
     #text(size:16pt)[#smallcaps("Abstract")] \
     #set align(left)
     #par(justify: true)[
-     #text(size:11pt)[#abstract]
+     #text[#abstract]
     ]]
 
   set align(left)
   v(1fr)
   par(justify: true)[
-    #set text(size: 10pt)
+    #set text(size: .9em)
       *JEL Clasification:* #JEL_codes\
       *Keywords:* #keywords
     ]
@@ -139,7 +155,7 @@
   set heading(numbering: "1.1")
 
   show heading: it => [
-    #block(below: 1em)[#it]
+    #block(below: 1.3em)[#it]
     ]
 
   // Link settings
@@ -153,9 +169,10 @@
 
   // Paragraph settings
   set par(justify: true, 
-          first-line-indent:2em, 
+          first-line-indent:1em, 
           leading: 1.5em, 
-          spacing: 2em)
+          spacing: 2em
+          )
   
   // Editing Mode: Uncomment the next line to see the text with bigger paragraph spacing
   if editing != none {

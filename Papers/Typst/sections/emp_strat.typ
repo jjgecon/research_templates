@@ -45,7 +45,8 @@ Now  we can also add a simple box with @m_prompt #todo[might want to implement `
       align: center
     ),
     title: [_Female Strong Woman_ prompt])[
-    #set text(font: "Courier New", size: 10pt)
+    #set par(leading: 1em)
+    #set text(font: "Courier New", size: 9pt)
     #lorem(50) 
     ] 
 ] <m_prompt>

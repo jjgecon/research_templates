@@ -12,7 +12,7 @@
   ),
   config-info(
     title: [Typst Presentation Template],
-    subtitle: [With and without cool _emoji summary_],
+    subtitle: [#lorem(10)],
     author: [Javier Gonzalez],
     date: datetime.today(),
     institution: [Southern Methodist University],
@@ -21,12 +21,12 @@
 )
 
 
-// Title slide with Emoji summary
-// for a emoji list you can look here https://typst.app/docs/reference/symbols/emoji/
-#title-slide(authors: ([Javier Gonzalez]), 
-             emoji_summary: [#emoji.woman.crown #emoji.fairy #text(size:24pt)[vs.] #emoji.woman.crown #emoji.fist.front])
+#slide()[
+  #set text(12pt)
+  #set page(columns: 2)
+  #outline(title: "TODOs", target: figure.where(kind: "todo"))
+]
 
-// Title slide without emoji summary, you can customize this if you want
 #title-slide(authors: ([Javier Gonzalez]), emoji_summary: none)
 
 #slide[
@@ -37,6 +37,8 @@
   - To learn more Typst go to #link("https://typst.app/docs/")[https://typst.app/docs/]
   - Presentations use the package #link("https://github.com/touying-typ/touying")[Touying] with a couple of different #link("https://github.com/touying-typ/touying/wiki")[themes].
   - This uses a modified version of the `simple` theme.
+  
+  #todo(position: "inline")[add todo comments]
 ]
 
 #slide[
@@ -75,6 +77,7 @@
 #slide[
   = Math and colors
   - You can also use colors in math!
+  #todo(position: "inline")[check math syntax]
   
   ```typst
    $x = #text(fill: red)[$a + b + 10$] $

@@ -57,9 +57,11 @@
 
 #pagebreak()
 
+#set par(leading: 1em)
 #bibliography("My Library.bib", style: "econ.csl")
 
 #pagebreak()
+#set par(leading: 1.5em)
 
 // Appendix Begins here
 

@@ -2,6 +2,8 @@
 // Author: Andreas Kröpelin
 // Modified by Javier Gonzalez
 #import "@preview/touying:0.6.1": *
+#import "@preview/dashy-todo:0.1.3": todo
+#import "@preview/showybox:2.0.4": showybox
 
 // Custom functions
 #let p_red =  rgb(172, 68, 37)
