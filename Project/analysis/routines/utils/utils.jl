@@ -174,14 +174,6 @@ function get_z_score(vector)
     return (vector .- m) ./ s
 end
 
-# Load other utils
-for file in readdir(path_utils)
-    if occursin(".jl", file) & (file != "utils.jl")
-        println("-- " * file)
-        include(file)
-    end
-end
-
 """
     create_stratified_sample_optimized(df::DataFrame, sample_size::Int; n_per_stratum::Int=5, stratum_col::Symbol=:stratum)
 
@@ -231,4 +223,12 @@ function create_stratified_sample(df::DataFrame, sample_size::Int; n_per_stratum
     end
     
     return final_sample
+end;
+
+# Load other utils
+for file in readdir(path_utils)
+    if occursin(".jl", file) & (file != "utils.jl")
+        println("-- " * file)
+        include(file)
+    end
 end;

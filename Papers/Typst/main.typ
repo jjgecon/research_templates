@@ -39,6 +39,8 @@
   keywords: [Media, Gender Gap, Social Norms, Latin America, Mass Media, Generative AI, Telenovelas],
 )
 
+#counter(footnote).update(0)
+
 = Introduction
 
 #include "sections/intro.typ"
