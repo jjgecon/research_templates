@@ -50,6 +50,8 @@ Mayor modifications to the manuscript will be shown in the following box
 
 #mayor_mod(page_n: "33", og: [#lorem(4)], revised: [#lorem(4) #highlight[#lorem(10)]])
 
+#pagebreak())
+
 = Reviewer 1
 
 #reviwerC(label: <c2>)[#lorem(40)#todo[address this comment]] 

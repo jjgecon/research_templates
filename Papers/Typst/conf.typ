@@ -155,7 +155,7 @@
   set heading(numbering: "1.1")
 
   show heading: it => [
-    #block(below: 1.3em)[#it]
+    #block(below: 1.3em, above: 2em)[#it]
     ]
 
   // Link settings
@@ -184,6 +184,9 @@
 
   // numbering of equations
   set math.equation(numbering: "(1)")
+
+  // restart footnote numbering
+  counter(footnote).update(0)
 
   // whole doc bellow
   doc

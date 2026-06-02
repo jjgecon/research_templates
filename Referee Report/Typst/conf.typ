@@ -50,6 +50,8 @@
 
   set page(margin: 2cm, 
            columns: 1,
+           height: 11in,
+           width: 8.5in,
            numbering: "1",
            footer: my_footer)
 
@@ -93,7 +95,13 @@
   set table(stroke:none)
 
   // Paragraph settings
-  set par(justify: true, first-line-indent:2em)
+    // Paragraph settings
+  set par(justify: true, 
+          first-line-indent:1em, 
+          leading: 1.5em, 
+          spacing: 2em
+          )
+          
   set align(left)
   // Editing Mode: Uncomment the next line to see the text with bigger paragraph spacing
   // set par(leading: 1.5em, spacing: 2em)

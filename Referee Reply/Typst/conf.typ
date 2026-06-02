@@ -34,14 +34,15 @@
   display: it => 
   showybox(
     frame: (
-      border-color: black,
-      title-color: it.fill,
-      border-width: 1pt,
+      title-color: p_red.lighten(70%),
+      border-color: p_red,
+      thickness: (left: 1pt),
+      radius: 0pt
     ),
     title-style: (
       color: black,
       weight: "regular",
-      align: center
+      sep-thickness: 0pt,
     ),
     title: [Comment #e.counter(it).display()])[
     #set text(font: "Courier New", size: 10pt)
@@ -58,28 +59,30 @@
   showybox(
       breakable: true,
       frame: (
-        border-color: black,
-        title-color: p_blue.lighten(60%),
-        border-width: 1pt,
+        border-color: p_blue,
+        title-color: p_blue.lighten(70%),
+        thickness: (left: 1pt),
+        radius: 0pt
       ),
       title-style: (
         color: black,
         weight: "regular",
-        align: center
+        sep-thickness: 0pt,
       ),
     title: [Mayor Modification  at p.#page_n],
     columns(1)[
     #set text(size: 9pt)
       #showybox(
         breakable: true,
-        title-style: (color: black, weight: "regular", align: center),
-        frame: (title-color: p_blue.lighten(80%)),
+        title-style: (color: black, weight: "bold",  sep-thickness: 0pt),
+        frame: (title-color: white.lighten(90%), thickness:0pt),
+        
         title: "Original"
       )[#og]
       #showybox(
         breakable: true,
-        title-style: (color: black, weight: "regular", align: center),
-        frame: (title-color: p_blue.lighten(80%)),
+        title-style: (color: black, weight: "bold",  sep-thickness: 0pt),
+        frame: (title-color: gray.lighten(90%), thickness:0pt, body-color: gray.lighten(90%)),
         title: "Revised",
       )[#revised]
     ]
