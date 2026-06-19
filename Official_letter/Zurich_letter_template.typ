@@ -2,7 +2,7 @@
 
 
 #show: conf.with(
-  uni_logo: "../0_media/uzh-logo-black.png",
+  uni_logo: "uzh-logo-black.png",
   uni_logo_size: 100%,
   university: "University of Zurich",
   college: "Department of Business Administration",
@@ -12,7 +12,7 @@
       name: "Javier Gonzalez",
       address: "Plattenstrasse 14, CH-8032; Zurich, Switzerland", // Always separate by `;` to create a new line
       email: "xxxxxx@uzh.ch",
-      position: "Postdoctotal Researcher",
+      position: "Postdoctoral Researcher",
   ),
   main_c: black,
 )

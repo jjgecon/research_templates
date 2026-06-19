@@ -116,7 +116,7 @@
            size: 11pt)
 
   set align(center)
-  par(text(20pt, "Replies for #" + submission_n))
+  par(text(20pt, "Replies for Manuscript " + submission_n))
   par(text(12pt, emph(title +  subtitle)))
 
 

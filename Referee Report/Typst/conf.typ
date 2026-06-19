@@ -59,14 +59,15 @@
            size: 11pt)
 
   // set align(center)
-  par(text(18pt, title))
-  par(text(12pt, emph(subtitle)))
+  par(text(18pt, title + subtitle))
+
+  set footnote(numbering: "*")
 
   if submission_n != none {
-    [Submission #text(12pt, emph("#" + submission_n))
-    
-     #datetime.today().display("[month repr:long] [year]") ]
+    [Submission #text(12pt, emph(submission_n)) reviewed on #datetime.today().display("[month repr:long] [year]")#footnote[During the preparation of this work the author used generative AI models (e.g. Gemini, Github Copilot, and Undermind) in order to check grammar and spelling, search for related literature. After using this tool/service, the author reviewed and edited the content as needed and take full responsibility for the content of the publication.]]
   }
+
+  set footnote(numbering: "1")
 
   v(.5cm)
 

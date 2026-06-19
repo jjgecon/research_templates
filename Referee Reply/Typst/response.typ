@@ -5,7 +5,7 @@
 
 #show: e.prepare()
 #show: conf.with(
-  submission_n: "12345",
+  submission_n: "#12345",
   title: [
     The Disney Princess Effect:
   ],
@@ -28,7 +28,7 @@
 
 = Summary
 
-+ #lorem(20)
++ #lorem(20) @pinon_meta-analytic_2005
 + #lorem(26)
 + #lorem(28)
 
@@ -72,3 +72,4 @@ To address @c2, we have added a new section on Page 33 that discusses the implic
       ]
     )
 
+#bibliography("My Library.bib", style: "econ.csl")

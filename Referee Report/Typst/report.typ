@@ -27,7 +27,7 @@ The authors can directly measure on-the-job experience (both how many hours they
 
 To address possible concerns, they replicate the results for other cities like San Francisco; they test to see if customers discriminate against their drivers or if drivers discriminate against their customers; they check to see the returns to speed for each gender and see if men drive in zones with higher crime rates of alcohol consumption (which could be completely explained by where they live).
 
-= Mayor Comments
+= Major Comments
 
 #todo(position: "inline")[something here]
 
@@ -40,6 +40,8 @@ When they analyze other cities like San Francisco, they find higher gaps (10% co
 The paper could be improved in two ways. First by modifying the abstract and introduction to make clear which data has been used for the decomposition and discuss more in detail how the incentive schemes introduce heterogeneity in the earnings gap between different cities. Second, they could get closer to a U.S. decomposition creating a group of different cities to construct a 3-dimensional panel (week, driver, city) and introduce city fixed effects that could potentially absorb all the incentive scheme differences across cities. Although, given the authors warning, this might be computationally infeasible.
 
 = Minor Comments
--	There is little discussion on how uber drivers get a negative return to work intensity (Section 3.3.1). Providing a plausible story could help readers understand the negative returns.
+-	There is little discussion on how uber drivers get a negative return to work intensity (Section 3.3.1). Providing a plausible story could help readers understand the negative returns. As seen in @depetris-chauvin_facto_2020.
 -	To provide more insight into the composition of tenure between genders they could present Figure 4 for January of each year within their sample (2015, 2016, and 2017). Changes in the composition of tenure over time might give some insight into how the gender gap evolves over time in the ridesharing industry.
 -	In the conclusion, the authors state: "Importantly, we do not find women to be disadvantaged by three factors that one might expect to contribute to a gender wage gap: …, preferences or constraints affecting specific hours worked, …" Then they say that given "…, flexible environment of the gig economy, gender-based preferences/constraints (especially the value of time not spent at paid work and, for drivers, preferences for driving speed) can open gender earnings gaps." Rewording the preferences/constraints to specifics as hours worked and the value of time between gender could avoid any confusion.
+
+#bibliography("My Library.bib", style: "econ.csl")
